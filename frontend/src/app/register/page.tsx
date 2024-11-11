@@ -1,9 +1,9 @@
 import RegisterForm from "@/components/form/RegisterForm";
-import React from "react";
+import "../globals.css";
 
 const Register = () => {
   return (
-    <main>
+    <main className="dashboard-container">
       <RegisterForm />
     </main>
   );

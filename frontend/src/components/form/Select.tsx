@@ -9,8 +9,8 @@ const Select = (props: SelectProps) => {
   const { register } = useFormContext();
 
   return (
-    <select {...register(props.name)} {...props}>
-      <option value="status" disabled selected hidden>
+    <select {...register(props.name)} {...props} defaultValue="status">
+      <option value="status" disabled hidden>
         Status
       </option>
       <option value="active">Ativo</option>

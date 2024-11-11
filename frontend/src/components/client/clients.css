@@ -32,7 +32,7 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .main-content {
@@ -50,7 +50,7 @@
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   gap: 0.5rem;
 }

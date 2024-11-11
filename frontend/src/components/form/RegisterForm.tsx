@@ -7,6 +7,8 @@ import { formSchema } from "@/schemas";
 import { Form } from ".";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Client } from "@/services/fakeData";
+import DashboardTitle from "../common/DashboardTitle";
+import "./form.css";
 
 const RegisterForm = () => {
   const router = useRouter();
@@ -22,33 +24,57 @@ const RegisterForm = () => {
 
   return (
     <FormProvider {...createUserForm}>
-      <form className="" onSubmit={handleSubmit(handleClick)}>
-        <Form.Field className="">
-          <Form.Input type="text" name="name" />
+      <DashboardTitle
+        title="Novo usuário"
+        subtitle="Informe os campos a seguir para criar novo usuário:"
+      />
+      <form className="form-container" onSubmit={handleSubmit(handleClick)}>
+        <Form.Field className="input-container">
+          <Form.Input
+            placeholder="Nome"
+            className="input"
+            type="text"
+            name="name"
+          />
           <Form.ErrorMessage field="name" />
         </Form.Field>
-        <Form.Field className="">
-          <Form.Input type="text" name="email" />
+        <Form.Field className="input-container">
+          <Form.Input
+            placeholder="E-mail"
+            className="input"
+            type="text"
+            name="email"
+          />
           <Form.ErrorMessage field="email" />
         </Form.Field>
-        <Form.Field className="">
-          <Form.Input type="text" name="personalID" />
+        <Form.Field className="input-container">
+          <Form.Input
+            placeholder="CPF"
+            className="input"
+            type="text"
+            name="personalID"
+          />
           <Form.ErrorMessage field="personalID" />
         </Form.Field>
-        <Form.Field className="">
-          <Form.Input type="text" name="phoneNumber" />
+        <Form.Field className="input-container">
+          <Form.Input
+            placeholder="Telefone"
+            className="input"
+            type="text"
+            name="phoneNumber"
+          />
           <Form.ErrorMessage field="phoneNumber" />
         </Form.Field>
-        <Form.Field>
-          <Form.Select name="status" defaultValue="Status" />
+        <Form.Field className="input-container">
+          <Form.Select name="status" className="input status-text" />
         </Form.Field>
         <section className="container-btns">
           <Form.SubmitBtn className="main-btn" type="submit">
             Entrar
           </Form.SubmitBtn>
-          <Link className="register-link" href="/sign-up">
+          <button className="sub-btn" onClick={() => router.back()}>
             Voltar
-          </Link>
+          </button>
         </section>
       </form>
     </FormProvider>

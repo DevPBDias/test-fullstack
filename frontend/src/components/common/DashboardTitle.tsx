@@ -1,3 +1,4 @@
+import "./styles.css";
 interface TitleProps {
   title: string;
   subtitle: string;
