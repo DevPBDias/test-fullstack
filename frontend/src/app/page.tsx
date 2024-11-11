@@ -17,6 +17,7 @@ export default function Home() {
           />
           <DashboardButton path="/register" text="Novo cliente" />
           <ClientList />
+          <p className="text-clients-qty">Exibindo 4 clientes</p>
         </div>
       </section>
     </main>
