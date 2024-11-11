@@ -5,6 +5,21 @@ import "./clients.css";
 type ClientProps = Client;
 
 const ClientCard = (props: ClientProps) => {
+  const statusColor = (status: string) => {
+    switch (status) {
+      case "Ativo":
+        return "active";
+      case "Inativo":
+        return "inactive";
+      case "Desativo":
+        return "disabled";
+      case "Aguardando ativação":
+        return "waiting";
+      default:
+        break;
+    }
+  };
+
   return (
     <section className="client-card-container">
       <div className="text-container">
@@ -17,7 +32,7 @@ const ClientCard = (props: ClientProps) => {
           <span className="sub-content">{props.phoneNumber}</span>
         </div>
         <div className="status-content">
-          <div className="status-color"></div>
+          <div className={`${statusColor(props.status)}`}></div>
           <span className="status-name">{props.status}</span>
         </div>
       </div>

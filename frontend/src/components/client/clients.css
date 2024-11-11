@@ -55,13 +55,6 @@
   gap: 0.5rem;
 }
 
-.status-color {
-  background-color: red;
-  width: 10px;
-  height: 10px;
-  border-radius: 9999px;
-}
-
 .status-name {
   color: rgb(53, 52, 52);
   font-size: 0.9rem;
@@ -81,4 +74,32 @@
 .card-button:hover {
   background-color: chocolate;
   color: white;
+}
+
+.active {
+  background-color: green;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+}
+
+.inactive {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+}
+
+.waiting {
+  background-color: rgb(255, 174, 0);
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+}
+
+.disabled {
+  background-color: rgb(172, 170, 170);
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
 }
