@@ -25,6 +25,20 @@ a {
   text-decoration: none;
 }
 
+main {
+  width: 100%;
+}
+
 .dashboard-container {
   padding-inline: 1rem;
+  width: 100%;
+}
+
+.information-container {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }

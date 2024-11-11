@@ -15,6 +15,7 @@
 }
 
 .container-title-dashboard {
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -32,4 +33,12 @@
 .subtitle-dashboard {
   color: rgb(53, 52, 52);
   font-size: 0.9rem;
+}
+
+.button-dashboard {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  background-color: chocolate;
+  border-radius: 8px;
+  font-weight: 700;
 }
