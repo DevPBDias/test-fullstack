@@ -1,10 +1,11 @@
 import { Client, clients } from "@/services/fakeData";
 import React from "react";
 import ClientCard from "./ClientCard";
+import "./clients.css";
 
 const ClientList = () => {
   return (
-    <div className="card-container">
+    <div className="client-list-container">
       {clients.map((item: Client) => (
         <ClientCard
           key={item.id}
@@ -12,7 +13,7 @@ const ClientList = () => {
           email={item.email}
           personalID={item.personalID}
           phoneNumber={item.phoneNumber}
-          status={item.email}
+          status={item.status}
         />
       ))}
     </div>

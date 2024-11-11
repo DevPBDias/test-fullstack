@@ -1,0 +1,84 @@
+.client-list-container {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-card-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  margin-block: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.text-container {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.text-content {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: start;
+}
+
+.main-content {
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.sub-content {
+  color: rgb(53, 52, 52);
+  font-size: 0.9rem;
+}
+
+.status-content {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-color {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+}
+
+.status-name {
+  color: rgb(53, 52, 52);
+  font-size: 0.9rem;
+}
+
+.card-button {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  background-color: white;
+  border-radius: 8px;
+  font-weight: 700;
+  color: chocolate;
+  border: 1px solid chocolate;
+  font-size: 0.9rem;
+}
+
+.card-button:hover {
+  background-color: chocolate;
+  color: white;
+}
