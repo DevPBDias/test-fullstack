@@ -1,21 +1,39 @@
-import Sequelize from "sequelize";
+import { Model, DataTypes } from "sequelize";
 import sequelize from "../database/configDB.js";
 
-const Produto = database.define("produto", {
-  id: {
-    type: Sequelize.INTEGER,
-    autoIncrement: true,
-    allowNull: false,
-    primaryKey: true,
-  },
-  nome: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  },
-  preco: {
-    type: Sequelize.DOUBLE,
-  },
-  descricao: Sequelize.STRING,
-});
+class Client extends Model {}
 
-module.exports = Produto;
+Product.init(
+  {
+    id: {
+      type: DataTypes.STRING,
+      primaryKey: true,
+      autoIncrement: true,
+      unique: true,
+    },
+    name: {
+      type: DataTypes.STRING,
+    },
+    email: {
+      type: DataTypes.STRING,
+      unique: true,
+    },
+    personalID: {
+      type: DataTypes.STRING,
+      unique: true,
+    },
+    phoneNumber: {
+      type: DataTypes.STRING,
+    },
+    status: {
+      type: DataTypes.STRING,
+    },
+  },
+  {
+    sequelize,
+    modelName: "client",
+    timestamps: true,
+  }
+);
+
+export default Client;
