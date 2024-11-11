@@ -1,3 +1,4 @@
+import ClientList from "@/components/client/ClientList";
 import DashboardButton from "@/components/common/DashboardButton";
 import DashboardTitle from "@/components/common/DashboardTitle";
 import PageTitle from "@/components/common/PageTitle";
@@ -15,6 +16,7 @@ export default function Home() {
             title="Listagem de usuários"
           />
           <DashboardButton path="/register" text="Novo cliente" />
+          <ClientList />
         </div>
       </section>
     </main>
