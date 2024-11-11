@@ -2,7 +2,7 @@ import { Client } from "@/services/fakeData";
 import Link from "next/link";
 import "./clients.css";
 
-type ClientProps = Omit<Client, "id">;
+type ClientProps = Client;
 
 const ClientCard = (props: ClientProps) => {
   return (
@@ -21,7 +21,7 @@ const ClientCard = (props: ClientProps) => {
           <span className="status-name">{props.status}</span>
         </div>
       </div>
-      <Link className="card-button" href="/edit">
+      <Link className="card-button" href={`/${props.id}`}>
         Editar
       </Link>
     </section>

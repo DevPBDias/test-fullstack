@@ -9,6 +9,7 @@ const ClientList = () => {
       {clients.map((item: Client) => (
         <ClientCard
           key={item.id}
+          id={item.id}
           name={item.name}
           email={item.email}
           personalID={item.personalID}
