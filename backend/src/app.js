@@ -1,12 +1,12 @@
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
-import clientRoute from "./src/routes/client.route.js";
+import { openDb } from "./database/configDB";
 
 const app = express();
+openDb();
 
 app.use(cors());
 app.use(express.json());
-app.use("/client", userRoute);
 
 export default app;
