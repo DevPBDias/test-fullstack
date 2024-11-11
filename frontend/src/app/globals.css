@@ -24,3 +24,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.dashboard-container {
+  padding-inline: 1rem;
+}

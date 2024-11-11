@@ -1,0 +1,35 @@
+.title-section {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  padding-block: 1rem;
+  border-bottom: 2px solid gray;
+}
+
+.title-page {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.container-title-dashboard {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: start;
+  gap: 0.2rem;
+  padding-block: 1rem;
+}
+
+.title-dashboard {
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.subtitle-dashboard {
+  color: rgb(53, 52, 52);
+  font-size: 0.9rem;
+}
