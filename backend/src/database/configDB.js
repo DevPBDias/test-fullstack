@@ -1,9 +1,8 @@
-import sqlite3 from "sqlite3";
-import { open } from "sqlite";
+import Sequelize from "sequelize";
 
-export async function openDb() {
-  return open({
-    filename: "./database.db",
-    driver: sqlite3.Database,
-  });
-}
+export const sequelize = new Sequelize("CRUD-db", "user", "password", {
+  dialect: "sqlite",
+  storage: "./database.sqlite",
+});
+
+export default sequelize;
