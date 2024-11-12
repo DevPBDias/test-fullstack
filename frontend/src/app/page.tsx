@@ -2,7 +2,6 @@ import ClientList from "@/components/client/ClientList";
 import DashboardButton from "@/components/common/DashboardButton";
 import DashboardTitle from "@/components/common/DashboardTitle";
 import PageTitle from "@/components/common/PageTitle";
-import Header from "@/components/header/Header";
 
 export default function Home() {
   return (
@@ -16,7 +15,6 @@ export default function Home() {
           />
           <DashboardButton path="/register" text="Novo cliente" />
           <ClientList />
-          <p className="text-clients-qty">Exibindo 4 clientes</p>
         </div>
       </section>
     </main>

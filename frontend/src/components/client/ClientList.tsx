@@ -18,6 +18,7 @@ const ClientList = async () => {
           status={item.status}
         />
       ))}
+      <p className="text-clients-qty">Exibindo {data.length} clientes</p>
     </div>
   );
 };
