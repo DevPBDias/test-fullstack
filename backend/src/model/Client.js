@@ -3,10 +3,10 @@ import sequelize from "../database/configDB.js";
 
 class Client extends Model {}
 
-Product.init(
+Client.init(
   {
     id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
       unique: true,
@@ -32,7 +32,7 @@ Product.init(
   {
     sequelize,
     modelName: "client",
-    timestamps: true,
+    timestamps: false,
   }
 );
 

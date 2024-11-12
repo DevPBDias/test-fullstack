@@ -1,5 +1,4 @@
-import { where } from "sequelize";
-import Client from "../model/Client";
+import Client from "../model/Client.js";
 
 const createClient = (body) => Client.create(body);
 const getAllClients = () => Client.findAll();
