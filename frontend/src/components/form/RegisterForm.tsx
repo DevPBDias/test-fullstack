@@ -1,12 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useForm, FormProvider } from "react-hook-form";
 import { formSchema } from "@/schemas";
 import { Form } from ".";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Client } from "@/services/clientData";
+import { Client, createNewClient } from "@/services/clientData";
 import DashboardTitle from "../common/DashboardTitle";
 import "./form.css";
 
@@ -16,10 +15,26 @@ const RegisterForm = () => {
     resolver: zodResolver(formSchema),
   });
 
-  const { handleSubmit } = createUserForm;
+  const {
+    handleSubmit,
+    reset,
+    formState: { isSubmitSuccessful },
+  } = createUserForm;
+
+  const resetForm = () => {
+    if (isSubmitSuccessful)
+      reset({
+        email: "",
+        name: "",
+        personalID: "",
+        phoneNumber: "",
+      });
+  };
 
   const handleClick = async (data: Client) => {
-    console.log(data);
+    await createNewClient(data);
+    resetForm();
+    router.push("/");
   };
 
   return (

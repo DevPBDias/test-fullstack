@@ -11,7 +11,7 @@ export type Client = {
 
 const baseURL = "http://localhost:3004";
 
-export function addClient(body: Client) {
+export function createNewClient(body: Client) {
   const response = axios.post(`${baseURL}/client`, body);
   return response;
 }
@@ -23,5 +23,10 @@ export const getClientsData = async () => {
 
 export function getClientById(id: string | number) {
   const response = axios.get(`${baseURL}/client/${id}`);
+  return response;
+}
+
+export function updateClienttById(id: string | number) {
+  const response = axios.patch(`${baseURL}/client/${id}`);
   return response;
 }
