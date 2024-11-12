@@ -13,10 +13,10 @@ const Select = (props: SelectProps) => {
       <option value="status" disabled hidden>
         Status
       </option>
-      <option value="active">Ativo</option>
-      <option value="inactive">Inativo</option>
-      <option value="waiting">Aguardando ativação</option>
-      <option value="disabled">Desativado</option>
+      <option value="Ativo">Ativo</option>
+      <option value="Inativo">Inativo</option>
+      <option value="Aguardando ativação">Aguardando ativação</option>
+      <option value="Desativo">Desativado</option>
     </select>
   );
 };
