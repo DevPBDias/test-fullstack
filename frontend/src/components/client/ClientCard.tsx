@@ -1,6 +1,6 @@
-import { Client } from "@/services/clientData";
 import Link from "next/link";
 import "./clients.css";
+import { Client } from "@/types";
 
 type ClientProps = Client;
 

@@ -1,4 +1,5 @@
-import { Client, getClientsData } from "@/services/clientData";
+import { getClientsData } from "@/services/clientData";
+import { Client } from "@/types";
 import ClientCard from "./ClientCard";
 import "./clients.css";
 

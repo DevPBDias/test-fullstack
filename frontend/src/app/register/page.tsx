@@ -1,10 +1,11 @@
 "use client";
 
+import { Client } from "@/types";
 import { useRouter } from "next/navigation";
 import { useForm, FormProvider } from "react-hook-form";
 import { formSchema } from "@/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Client, createNewClient } from "@/services/clientData";
+import { createNewClient } from "@/services/clientData";
 import "../../components/form/form.css";
 import { Form } from "@/components/form";
 import DashboardTitle from "@/components/common/DashboardTitle";

@@ -1,13 +1,5 @@
+import { Client } from "@/types";
 import axios from "axios";
-
-export type Client = {
-  id: string;
-  name: string;
-  email: string;
-  personalID: string;
-  phoneNumber: string;
-  status: string;
-};
 
 const baseURL = "http://localhost:3004";
 

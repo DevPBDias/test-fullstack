@@ -4,11 +4,8 @@ import { useRouter } from "next/navigation";
 import { useForm, FormProvider } from "react-hook-form";
 import { formSchema } from "@/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  Client,
-  getClientById,
-  updateClienttById,
-} from "@/services/clientData";
+import { getClientById, updateClienttById } from "@/services/clientData";
+import { Client } from "@/types";
 import "../../components/form/form.css";
 import React, { useEffect } from "react";
 import { Form } from "@/components/form";
