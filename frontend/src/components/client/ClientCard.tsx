@@ -1,4 +1,4 @@
-import { Client } from "@/services/fakeData";
+import { Client } from "@/services/clientData";
 import Link from "next/link";
 import "./clients.css";
 

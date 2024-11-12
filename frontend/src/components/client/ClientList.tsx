@@ -1,12 +1,13 @@
-import { Client, clients } from "@/services/fakeData";
-import React from "react";
+import { Client, getClientsData } from "@/services/clientData";
 import ClientCard from "./ClientCard";
 import "./clients.css";
 
-const ClientList = () => {
+const ClientList = async () => {
+  const { data } = await getClientsData();
+
   return (
     <div className="client-list-container">
-      {clients.map((item: Client) => (
+      {data?.map((item: Client) => (
         <ClientCard
           key={item.id}
           id={item.id}

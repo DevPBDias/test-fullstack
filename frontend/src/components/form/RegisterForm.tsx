@@ -6,7 +6,7 @@ import { useForm, FormProvider } from "react-hook-form";
 import { formSchema } from "@/schemas";
 import { Form } from ".";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Client } from "@/services/fakeData";
+import { Client } from "@/services/clientData";
 import DashboardTitle from "../common/DashboardTitle";
 import "./form.css";
 
