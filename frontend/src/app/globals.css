@@ -34,11 +34,36 @@ main {
   width: 100%;
 }
 
+.dashboad-header {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
 .information-container {
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+@media (1024px <= width) {
+  .dashboard-container {
+    padding-inline: 10%;
+    padding-block: 3rem;
+  }
+
+  .dashboad-header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1rem;
+    gap: 0;
+  }
 }

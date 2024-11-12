@@ -9,11 +9,13 @@ export default function Home() {
       <section className="dashboard-container">
         <PageTitle titleName="Painel de clientes" />
         <div className="information-container">
-          <DashboardTitle
-            subtitle="Escolha um cliente para visualizar detalhes"
-            title="Listagem de usuários"
-          />
-          <DashboardButton path="/register" text="Novo cliente" />
+          <div className="dashboad-header">
+            <DashboardTitle
+              subtitle="Escolha um cliente para visualizar detalhes"
+              title="Listagem de usuários"
+            />
+            <DashboardButton path="/register" text="Novo cliente" />
+          </div>
           <ClientList />
         </div>
       </section>

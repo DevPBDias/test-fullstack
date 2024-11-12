@@ -49,6 +49,23 @@
   border: none;
 }
 
+.main-btn {
+  width: 100%;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  background-color: chocolate;
+  color: white;
+  border-radius: 8px;
+  font-weight: 700;
+  border: none;
+}
+
+.main-btn:hover {
+  background-color: white;
+  color: chocolate;
+  border: 1px solid chocolate;
+}
+
 .sub-btn {
   width: 100%;
   padding-inline: 1rem;
@@ -58,4 +75,59 @@
   border-radius: 8px;
   font-weight: 700;
   border: 1px solid chocolate;
+}
+
+.sub-btn:hover {
+  background-color: chocolate;
+  color: white;
+}
+
+.error-msg {
+  color: red;
+  font-size: 0.7rem;
+  text-align: left;
+  width: 100%;
+  padding-left: 0.5rem;
+}
+
+option {
+  color: black;
+}
+
+@media (1024px <= width) {
+  .form-container {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .input-container {
+    width: 40%;
+  }
+
+  .container-btns {
+    width: 40%;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .input {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .input::placeholder {
+    font-size: 1rem;
+  }
+
+  .main-btn,
+  .sub-btn {
+    padding-inline: 1rem;
+    padding-block: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .error-msg {
+    font-size: 0.85rem;
+  }
 }

@@ -69,6 +69,7 @@
   color: chocolate;
   border: 1px solid chocolate;
   font-size: 0.9rem;
+  text-align: center;
 }
 
 .card-button:hover {
@@ -102,4 +103,15 @@
   width: 10px;
   height: 10px;
   border-radius: 9999px;
+}
+
+@media (1024px <= width) {
+  .text-container {
+    flex-flow: row nowrap;
+    padding-block: 1rem;
+  }
+
+  .card-button {
+    width: 12rem;
+  }
 }
