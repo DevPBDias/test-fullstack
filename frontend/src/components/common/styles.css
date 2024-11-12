@@ -6,7 +6,7 @@
   align-items: center;
   gap: 0.5rem;
   padding-block: 1rem;
-  border-bottom: 2px solid gray;
+  border-bottom: 1px solid gray;
 }
 
 .title-page {
@@ -52,6 +52,26 @@
 }
 
 @media (1024px <= width) {
+  .title-section {
+    padding-block: 1.5rem;
+  }
+
+  .title-page {
+    font-size: 2rem;
+  }
+
+  .container-title-dashboard {
+    padding-block: 2rem;
+  }
+
+  .title-dashboard {
+    font-size: 1.2rem;
+  }
+
+  .subtitle-dashboard {
+    font-size: 1rem;
+  }
+
   .button-dashboard {
     width: 12rem;
     padding-inline: 1rem;

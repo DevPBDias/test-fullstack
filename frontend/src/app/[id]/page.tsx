@@ -10,6 +10,7 @@ import "../../components/form/form.css";
 import React, { useEffect } from "react";
 import { Form } from "@/components/form";
 import DashboardTitle from "@/components/common/DashboardTitle";
+import PageTitle from "@/components/common/PageTitle";
 
 const EditForm = ({ params }: any) => {
   const router = useRouter();
@@ -53,6 +54,7 @@ const EditForm = ({ params }: any) => {
   return (
     <FormProvider {...createUserForm}>
       <main className="dashboard-container">
+        <PageTitle titleName="Painel de clientes" />
         <DashboardTitle
           title="Editar usuário"
           subtitle="Troque os campos a seguir do usuário existente:"
@@ -99,11 +101,8 @@ const EditForm = ({ params }: any) => {
           </Form.Field>
           <section className="container-btns">
             <Form.SubmitBtn className="main-btn" type="submit">
-              Editar
+              Confirmar
             </Form.SubmitBtn>
-            <button className="sub-btn" onClick={() => router.back()}>
-              Voltar
-            </button>
           </section>
         </form>
       </main>

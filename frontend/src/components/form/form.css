@@ -47,17 +47,7 @@
   border-radius: 8px;
   font-weight: 700;
   border: none;
-}
-
-.main-btn {
-  width: 100%;
-  padding-inline: 1rem;
-  padding-block: 0.5rem;
-  background-color: chocolate;
-  color: white;
-  border-radius: 8px;
-  font-weight: 700;
-  border: none;
+  cursor: pointer;
 }
 
 .main-btn:hover {

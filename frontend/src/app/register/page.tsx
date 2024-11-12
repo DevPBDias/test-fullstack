@@ -9,6 +9,7 @@ import { createNewClient } from "@/services/clientData";
 import "../../components/form/form.css";
 import { Form } from "@/components/form";
 import DashboardTitle from "@/components/common/DashboardTitle";
+import PageTitle from "@/components/common/PageTitle";
 
 const RegisterForm = () => {
   const router = useRouter();
@@ -41,6 +42,7 @@ const RegisterForm = () => {
   return (
     <FormProvider {...createUserForm}>
       <main className="dashboard-container">
+        <PageTitle titleName="Painel de clientes" />
         <DashboardTitle
           title="Novo usuário"
           subtitle="Informe os campos a seguir para criar novo usuário:"
