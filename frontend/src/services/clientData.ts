@@ -26,7 +26,7 @@ export function getClientById(id: string | number) {
   return response;
 }
 
-export function updateClienttById(id: string | number) {
-  const response = axios.patch(`${baseURL}/client/${id}`);
+export function updateClienttById(id: string | number, body: Client) {
+  const response = axios.patch(`${baseURL}/client/${id}`, body);
   return response;
 }
