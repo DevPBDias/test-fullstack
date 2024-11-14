@@ -26,6 +26,16 @@ const createClient = async (req, res) => {
       },
     });
   } catch (error) {
+    if (error.errors[0].message === "personalID must be unique") {
+      return res
+        .status(422)
+        .send({ message: "Cpf já existente no banco de dados" });
+    }
+    if (error.errors[0].message === "email must be unique") {
+      return res
+        .status(422)
+        .send({ message: "E-mail já existente no banco de dados" });
+    }
     res.status(500).send({ message: error.message });
   }
 };

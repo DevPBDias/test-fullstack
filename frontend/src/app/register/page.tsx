@@ -10,9 +10,13 @@ import "../../components/form/form.css";
 import { Form } from "@/components/form";
 import DashboardTitle from "@/components/common/DashboardTitle";
 import PageTitle from "@/components/common/PageTitle";
+import Link from "next/link";
+import { useState } from "react";
 
 const RegisterForm = () => {
   const router = useRouter();
+  const [emailError, setEmailError] = useState<boolean>(false);
+  const [personalIDError, setPersonalIDError] = useState<boolean>(false);
   const createUserForm = useForm<Client>({
     resolver: zodResolver(formSchema),
   });
@@ -34,9 +38,24 @@ const RegisterForm = () => {
   };
 
   const handleClick = async (data: Client) => {
-    await createNewClient(data);
-    resetForm();
-    router.push("/");
+    try {
+      await createNewClient(data);
+      resetForm();
+      router.push("/");
+    } catch (error: any) {
+      if (
+        error.response.data.message === "E-mail já existente no banco de dados"
+      ) {
+        setEmailError(true);
+        setPersonalIDError(false);
+      }
+      if (
+        error.response.data.message === "Cpf já existente no banco de dados"
+      ) {
+        setEmailError(false);
+        setPersonalIDError(true);
+      }
+    }
   };
 
   return (
@@ -89,12 +108,18 @@ const RegisterForm = () => {
           </Form.Field>
           <section className="container-btns">
             <Form.SubmitBtn className="main-btn" type="submit">
-              Entrar
+              Criar
             </Form.SubmitBtn>
-            <button className="sub-btn" onClick={() => router.back()}>
+            <Link className="sub-btn" href="/">
               Voltar
-            </button>
+            </Link>
           </section>
+          {emailError && (
+            <span className="error-msg">E-mail já cadastrado</span>
+          )}
+          {personalIDError && (
+            <span className="error-msg">Cpf já cadastrado</span>
+          )}
         </form>
       </main>
     </FormProvider>

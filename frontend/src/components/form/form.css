@@ -65,6 +65,10 @@
   border-radius: 8px;
   font-weight: 700;
   border: 1px solid chocolate;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .sub-btn:hover {
@@ -110,10 +114,15 @@ option {
     font-size: 1rem;
   }
 
-  .main-btn,
-  .sub-btn {
+  .main-btn {
     padding-inline: 1rem;
     padding-block: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .sub-btn {
+    padding-inline: 1rem;
+    padding-block: 0.6rem;
     font-size: 1rem;
   }
 
