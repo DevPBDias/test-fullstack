@@ -64,21 +64,22 @@ const updateClient = async (req, res) => {
       return res.status(400).send({ message: "Submit at least one field" });
     }
 
-    const clientFound = await clientService.updateClient(id, {
-      name,
-      phoneNumber,
-      email,
-      personalID,
-      status,
-    });
+    const clientFound = await clientService.getClientById(id);
 
     if (!clientFound) {
       return response.status(400).json("Client not found");
     }
 
+    clientFound.name = name;
+    clientFound.phoneNumber = phoneNumber;
+    clientFound.email = email;
+    clientFound.personalID = personalID;
+    clientFound.status = status;
+
+    await clientFound.save();
+
     res.status(200).send({ message: "Updated" });
   } catch (error) {
-    console.log(error);
     res.status(500).send({ message: error.message });
   }
 };
