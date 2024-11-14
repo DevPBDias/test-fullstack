@@ -31,8 +31,9 @@
 }
 
 .subtitle-dashboard {
-  color: rgb(53, 52, 52);
+  color: rgb(117, 117, 117);
   font-size: 0.9rem;
+  font-weight: 400;
 }
 
 .button-dashboard {

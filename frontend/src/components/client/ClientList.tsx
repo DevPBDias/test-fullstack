@@ -10,6 +10,7 @@ const ClientList = async () => {
     <div className="client-list-container">
       {data?.map((item: Client) => (
         <ClientCard
+          data-testid={`client-${item.id}`}
           key={item.id}
           id={item.id}
           name={item.name}
@@ -19,7 +20,9 @@ const ClientList = async () => {
           status={item.status}
         />
       ))}
-      <p className="text-clients-qty">Exibindo {data.length} clientes</p>
+      <p data-testid="length" className="text-clients-qty">
+        Exibindo {data.length} clientes
+      </p>
     </div>
   );
 };

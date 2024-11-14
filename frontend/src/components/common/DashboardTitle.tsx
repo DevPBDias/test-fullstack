@@ -7,8 +7,8 @@ interface TitleProps {
 const DashboardTitle = ({ title, subtitle }: TitleProps) => {
   return (
     <div className="container-title-dashboard">
-      <p className="title-dashboard">{title}</p>
-      <p className="subtitle-dashboard">{subtitle}</p>
+      <h3 className="title-dashboard">{title}</h3>
+      <h4 className="subtitle-dashboard">{subtitle}</h4>
     </div>
   );
 };
