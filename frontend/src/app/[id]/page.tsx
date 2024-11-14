@@ -7,12 +7,14 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { getClientById, updateClienttById } from "@/services/clientData";
 import { Client } from "@/types";
 import "../../components/form/form.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Form } from "@/components/form";
 import DashboardTitle from "@/components/common/DashboardTitle";
 import PageTitle from "@/components/common/PageTitle";
 
 const EditForm = ({ params }: any) => {
+  const [emailError, setEmailError] = useState<boolean>(false);
+  const [personalIDError, setPersonalIDError] = useState<boolean>(false);
   const router = useRouter();
   const { id }: any = React.use(params);
 
@@ -46,9 +48,24 @@ const EditForm = ({ params }: any) => {
   }, []);
 
   const handleClick = async (formData: Client) => {
-    await updateClienttById(id, formData);
-    resetForm();
-    router.push("/");
+    try {
+      await updateClienttById(id, formData);
+      resetForm();
+      router.push("/");
+    } catch (error: any) {
+      if (
+        error.response.data.message === "E-mail já existente no banco de dados"
+      ) {
+        setEmailError(true);
+        setPersonalIDError(false);
+      }
+      if (
+        error.response.data.message === "Cpf já existente no banco de dados"
+      ) {
+        setEmailError(false);
+        setPersonalIDError(true);
+      }
+    }
   };
 
   return (
@@ -104,6 +121,12 @@ const EditForm = ({ params }: any) => {
               Confirmar
             </Form.SubmitBtn>
           </section>
+          {emailError && (
+            <span className="error-msg">E-mail já cadastrado</span>
+          )}
+          {personalIDError && (
+            <span className="error-msg">Cpf já cadastrado</span>
+          )}
         </form>
       </main>
     </FormProvider>
